@@ -29,7 +29,8 @@
     "email": "info.uk@readingroom.com"
   },
   "files": [
-    "bin"
+    "bin",
+    ".babelrc"
   ],
   "main": "bin/babel.js",
   "bin": {
