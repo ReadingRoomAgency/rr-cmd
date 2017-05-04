@@ -4,6 +4,7 @@ import packageJson from '../package.json';
 import update from './update';
 import checkIfNeedsUpdate from './checkIfNeedsUpdate';
 import globalHelp from './globalHelp';
+import add from './add';
 
 winston.cli();
 
@@ -39,8 +40,33 @@ if (!options.cmd || !options.cmd.length || options.cmd[0] === 'help') {
         winston.log('debug', 'Log version');
         winston.log('info', `${packageJson.name} version: ${packageJson.version}`);
       } else {
-        winston.log('debug', 'Command not found');
-        globalHelp(options.cmd[0]);
+        switch (options.cmd[0]) {
+          case 'add':
+            winston.log('debug', 'Add command');
+            add();
+            break;
+
+          case 'cd':
+            winston.log('debug', 'Change directory command');
+            break;
+
+          case 'install':
+            winston.log('debug', 'Install command');
+            break;
+
+          case 'rm':
+            winston.log('debug', 'Remove command');
+            break;
+
+          case 'run':
+            winston.log('debug', 'Run command');
+            break;
+
+          default:
+            winston.log('debug', 'Command not found');
+            globalHelp(options.cmd[0]);
+            break;
+        }
       }
     }
   });

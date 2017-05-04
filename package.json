@@ -42,6 +42,7 @@
     "babel-preset-stage-2": "6.24.1",
     "babel-register": "6.24.1",
     "command-line-args": "4.0.4",
+    "directory-exists": "1.0.1",
     "eslint": "3.19.0",
     "eslint-config-airbnb": "14.1.0",
     "eslint-plugin-import": "2.2.0",
@@ -49,6 +50,7 @@
     "eslint-plugin-react": "6.10.3",
     "inquirer": "3.0.6",
     "latest-version": "3.1.0",
+    "user-settings": "0.1.5",
     "winston": "2.3.1"
   }
 }

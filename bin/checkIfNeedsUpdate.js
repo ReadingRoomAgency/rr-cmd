@@ -34,7 +34,11 @@ export default function (callback) {
 
     return callback(false);
   }).catch((err) => {
-    winston.log('debug', 'Error getting latest version', err);
+    winston.log('error', '');
+    winston.log('error', 'Error getting latest version', err);
+    winston.log('error', 'Carrying on anyway');
+    winston.log('error', '');
+
     callback(false);
   });
 }
