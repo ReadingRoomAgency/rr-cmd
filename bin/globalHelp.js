@@ -7,7 +7,6 @@ export default function (commandNotFound) {
     '',
     '  COMMANDS:',
     '    add             Add a global command',
-    '    cd              Change directory to the package.json of a global command',
     '    install         Install a template',
     '    rm              Remove a global command',
     '    run             Run a global command',

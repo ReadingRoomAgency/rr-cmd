@@ -47,10 +47,6 @@ if (!options.cmd || !options.cmd.length || options.cmd[0] === 'help') {
             add();
             break;
 
-          case 'cd':
-            winston.log('debug', 'Change directory command');
-            break;
-
           case 'install':
             winston.log('debug', 'Install command');
             break;
