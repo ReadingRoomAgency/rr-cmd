@@ -9,9 +9,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ReadingRoomAgency/rr-cmd.git"
+    "url": "git+https://github.com/ReadingRoomAgency/templates.git"
   },
-  "homepage": "https://github.com/ReadingRoomAgency/rr-cmd#readme",
+  "homepage": "https://github.com/ReadingRoomAgency/templates#readme",
   "scripts": {
     "start": "node bin/babel.js",
     "version:patch": "npm version patch",
@@ -24,7 +24,7 @@
     "node": ">=6.9.1"
   },
   "bugs": {
-    "url": "https://github.com/ReadingRoomAgency/rr-cmd/issues",
+    "url": "https://github.com/ReadingRoomAgency/templates/issues",
     "email": "info.uk@readingroom.com"
   },
   "files": [
