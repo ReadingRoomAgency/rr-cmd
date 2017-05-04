@@ -18,7 +18,8 @@
     "version:minor": "npm version minor",
     "version:major": "npm version major",
     "lint": "eslint **/*.js",
-    "eslint": "eslint"
+    "eslint": "eslint",
+    "preinstall": "npm i yarn -g"
   },
   "engine": {
     "node": ">=6.9.1"
