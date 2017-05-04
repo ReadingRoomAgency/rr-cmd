@@ -19,8 +19,6 @@ function returnPackageJsonPath(input) {
 }
 
 export default function () {
-  winston.log('debug', 'add.js');
-
   const questions = [
     {
       type: 'input',

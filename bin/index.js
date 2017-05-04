@@ -5,6 +5,7 @@ import update from './update';
 import checkIfNeedsUpdate from './checkIfNeedsUpdate';
 import globalHelp from './globalHelp';
 import add from './add';
+import remove from './remove';
 
 winston.cli();
 
@@ -56,6 +57,7 @@ if (!options.cmd || !options.cmd.length || options.cmd[0] === 'help') {
 
           case 'rm':
             winston.log('debug', 'Remove command');
+            remove(options.cmd[1]);
             break;
 
           case 'run':

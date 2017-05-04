@@ -50,7 +50,7 @@
     "eslint-plugin-react": "6.10.3",
     "inquirer": "3.0.6",
     "latest-version": "3.1.0",
-    "user-settings": "0.1.5",
+    "user-settings": "git+https://github.com/cajacko/user-settings.git",
     "winston": "2.3.1"
   }
 }
