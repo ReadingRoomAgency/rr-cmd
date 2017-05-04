@@ -1,6 +1,6 @@
 import winston from 'winston';
-import inquirer from 'inquirer';
 import settings from './settings';
+import chooseProject from './chooseProject';
 
 export default function (projectName) {
   if (projectName) {
@@ -17,16 +17,9 @@ export default function (projectName) {
   } else {
     winston.log('debug', 'Show choice of commands to remove');
 
-    const questions = [{
-      type: 'list',
-      name: 'choice',
-      message: 'Which command would you like to remove?',
-      choices: () => Object.keys(settings.get()),
-    }];
-
-    inquirer.prompt(questions).then((answers) => {
-      settings.unset(answers.choice);
-      winston.log('info', `Removed command: ${answers.choice}`);
+    chooseProject('Which command would you like to remove?', (choice) => {
+      settings.unset(choice);
+      winston.log('info', `Removed command: ${choice}`);
     });
   }
 }

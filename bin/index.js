@@ -6,6 +6,7 @@ import checkIfNeedsUpdate from './checkIfNeedsUpdate';
 import globalHelp from './globalHelp';
 import add from './add';
 import remove from './remove';
+import run from './run';
 
 winston.cli();
 
@@ -58,6 +59,7 @@ if (!options.cmd || !options.cmd.length || options.cmd[0] === 'help') {
 
           case 'run':
             winston.log('debug', 'Run command');
+            run(options.cmd);
             break;
 
           default:
