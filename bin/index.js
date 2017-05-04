@@ -3,6 +3,7 @@ import commandLineArgs from 'command-line-args';
 import packageJson from '../package.json';
 import update from './update';
 import checkIfNeedsUpdate from './checkIfNeedsUpdate';
+import globalHelp from './globalHelp';
 
 winston.cli();
 
@@ -22,7 +23,9 @@ if (options.debug) {
 winston.log('debug', 'DEBUG ENABLED');
 winston.log('debug', 'Options', options);
 
-if (options.update || options.cmd[0] === 'update') {
+if (!options.cmd || !options.cmd.length || options.cmd[0] === 'help') {
+  globalHelp();
+} else if (options.update || options.cmd[0] === 'update') {
   update();
 } else {
   checkIfNeedsUpdate((confirmUpdate) => {
@@ -35,6 +38,9 @@ if (options.update || options.cmd[0] === 'update') {
       if (options.version || options.cmd[0] === 'version') {
         winston.log('debug', 'Log version');
         winston.log('info', `${packageJson.name} version: ${packageJson.version}`);
+      } else {
+        winston.log('debug', 'Command not found');
+        globalHelp(options.cmd[0]);
       }
     }
   });
