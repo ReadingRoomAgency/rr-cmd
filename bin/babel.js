@@ -2,7 +2,7 @@
 
 require('babel-register')({
   ignore: false,
-  only: /bin/
+  only: /bin|generators/,
 });
 
 require('./index');

@@ -19,7 +19,6 @@
         "ignoreUrls": true,
         "ignoreRegExpLiterals": true
       }
-    ],
-  },
-  "parser": "babel-eslint"
+    ]
+  }
 }

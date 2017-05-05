@@ -7,6 +7,7 @@ import globalHelp from './globalHelp';
 import add from './add';
 import remove from './remove';
 import run from './run';
+import install from './install';
 
 winston.cli();
 
@@ -50,6 +51,7 @@ if (!options.cmd || !options.cmd.length || options.cmd[0] === 'help') {
 
           case 'install':
             winston.log('debug', 'Install command');
+            install(options.cmd[1]);
             break;
 
           case 'rm':
