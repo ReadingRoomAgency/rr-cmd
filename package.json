@@ -30,7 +30,9 @@
   },
   "files": [
     "bin",
-    ".babelrc"
+    ".babelrc",
+    "generators",
+    "templates"
   ],
   "main": "bin/babel.js",
   "bin": {
